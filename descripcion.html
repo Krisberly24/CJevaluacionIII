@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+		<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+	<title>Descripcion Siniestro</title>
+</head>
+<body>
+
+<div class="container">
+  <h2>Detalles del accidente</h2>
+  <form action="">
+    <div class="form-group">
+      <label for="detalles">Detalles de los accidentes:</label>
+      <textarea class="form-control" rows="5" id="detalles" name="text"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="daños">Daños provocados al vehículo</label>
+      <textarea class="form-control" rows="5" id="daños" name="text"></textarea>
+    </div>
+    <button type="submit" id="boton" class="btn btn-primary" onclick="validar()">Grabar</button>
+  </form>
+</div>
+
+<script type="text/javascript">
+	
+
+	function validar()
+	  {
+	  var validado = true;
+	  elementos = document.getElementsByClassName("form-control");
+	  for(i=0;i<elementos.length;i++)
+	  {
+	    if(elementos[i].value == "" || elementos[i].value == null)
+	    {
+	    validado = false
+	    }
+	  }
+	  if(validado)
+	  {
+	  
+	  	 alert("Siniestro guardado")   
+	  }
+	  else
+	  {
+	    
+	  //Salta un alert cada vez que escribes y hay un campo vacio
+	  alert("Hay campos vacios, debe rellenar los campos")   
+	  }
+	}
+	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+		<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<title>Evaluacion Modulo III</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<h2>Datos Vehiculo Siniestrado</h2>
+					</div>
+				  <div class="card-body">
+				    <form class="form-horizontal">
+
+					  <div class="form-group">
+					    <label for="tvehiculo">Tipo de vehiculo:</label>
+					    <input type="text" class="form-control" id="inputFormu"  placeholder="Ingrese tipo de vehiculo" required>
+					  </div>
+					  
+					  <div class="form-group">
+					    <label for="patente">Patente</label>
+					    <input type="text"  class="form-control" id="inputFormu"  name="FirstName" required  placeholder="Ingrese patente">
+					  </div>
+					 
+					  <div class="form-group">
+					    <label for="marca">Marca :</label>
+					    <input type="text" required class="form-control" id="inputFormu" name="apellido" required  placeholder="Ingrese marca">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="modelo">Modelo</label>
+					    <input type="text" class="form-control" id="inputFormu" required  placeholder="Ingrese modelo">
+					  </div>
+
+					  <div class="form-group">
+					    <label for="chasis">Número chasis:</label>
+					    <input type="number" class="form-control" id="inputFormu"  placeholder="Ingrese N° chasis">
+					  </div>
+					  <div class="form-group">
+					    <label for="motor">Número motor:</label>
+					    <input type="number" class="form-control" id="inputFormu"   placeholder="Ingrese N° motor">
+					  </div>
+
+						<div class="form-group">
+						    <label for="rut">Rut del asegurado:</label>
+						    <input type="number" class="form-control" id="inputFormu"  placeholder="Ingrese rut">
+						</div>				   
+					</form>
+				  </div>
+				  <div class="card-footer">
+				  	<div class="col-12 offset-5">
+				  		<button id="boton" type="button" class="btn btn-dark" onclick="validar()" >Continuar</button>
+				  	</div>
+				  </div>
+				</div>
+				
+			</div>
+		</div>
+
+
+</div>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>-->
+
+
+<script type="text/javascript">
+	
+
+	function validar()
+	  {
+	  var validado = true;
+	  elementos = document.getElementsByClassName("form-control");
+	  for(i=0;i<elementos.length;i++)
+	  {
+	    if(elementos[i].value == "" || elementos[i].value == null)
+	    {
+	    validado = false
+	    }
+	  }
+	  if(validado)
+	  {
+	  	//document.getElementById("boton").disabled = false;
+	  	location.href = "descripcion.html";
+	  }
+	  else
+	  {
+	     //document.getElementById("boton").disabled = true;
+	  //Salta un alert cada vez que escribes y hay un campo vacio
+	  alert("Hay campos vacios, debe rellenar los campos")   
+	  }
+	}
+	
+
+</script>
+
+</body>
+</html>
